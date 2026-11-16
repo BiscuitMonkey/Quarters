@@ -1276,7 +1276,7 @@ function weekCard(m) {
 R.chores = function (m) {
   var vis = D.chores.filter(function (c) { return !UI.who || UI.who === 'all' || c.who === UI.who; });
   var todo = vis.filter(function (c) { return !c.done; }), done = vis.filter(function (c) { return c.done; });
-  return '<div class="inner"><header class="sechead finhead"><h1 class="h1">Chores</h1><button aria-label="Add a chore" data-act="addChore" style="width:44px;height:44px;border-radius:50%;border:0;background:var(--chore);color:#fff;display:flex;align-items:center;justify-content:center">' + ic(I.plus, 20, 2.2) + '</button></header>' +
+  return '<div class="inner"><header class="sechead finhead"><h1 class="h1">Chores</h1><div class="hacts"><button class="hbtn ghost hdr" aria-label="Swap a chore" data-act="sheet" data-sheet="swapPick">' + ic(I.swap, 20, 2.2) + '</button><button aria-label="Add a chore" data-act="addChore" style="width:44px;height:44px;border-radius:50%;border:0;background:var(--chore);color:#fff;display:flex;align-items:center;justify-content:center">' + ic(I.plus, 20, 2.2) + '</button></div></header>' +
     carousel('chores', [weekCard(m), choreCalCard(m)], ['chore penny', 'chore calendar']) +
     whoPicker(m) +
     '<div class="chlist"><div class="sechead" style="margin-top:var(--s3)"><p class="cap" style="margin:0">To do</p><button class="link" data-act="push" data-to="chorelist">Edit list</button></div>' +
