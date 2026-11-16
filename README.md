@@ -6,8 +6,9 @@ Clickable prototype for Quarters, a roommate and household app (rent, shared bil
 
 | Path | Version | Notes |
 |---|---|---|
-| `/` | V6 | Current working version |
-| `/v6/` | V6 | Same as the root, kept as a stable link |
+| `/` | V7 | Current working version: V6 plus a start-up loader (the Q mark) |
+| `/v7/` | V7 | Same as the root, kept as a stable link |
+| `/v6/` | V6 | Previous working version |
 | `/v5/` | V5 | Locked for round-2 user testing |
 
 Each version is a single self-contained HTML file. Open it in a browser, or on a phone add it to the Home Screen for the full-screen app.
