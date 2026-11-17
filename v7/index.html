@@ -1759,7 +1759,7 @@ function sheetHTML() {
     if (!f.swapWith || f.swapWith === 'J' || ALL.indexOf(f.swapWith) < 0) f.swapWith = mates[0].id;
     var theirs = upcomingFor(f.swapWith, 14).filter(function (y) { return !pendingOn(y.key); }).slice(0, 6);
     if (!theirs.some(function (y) { return y.key === f.swapGet; })) f.swapGet = theirs[0] ? theirs[0].key : null;
-    return '<h2>Swap ' + esc(sx.c.name.toLowerCase()) + '</h2><p style="margin-top:var(--s1);font-size:14px;color:var(--muted)">' + dlabel(sx.at) + ' · they have to accept</p>' +
+    return '<h2>Swap ' + esc(sx.c.name.toLowerCase()) + '</h2><p style="margin-top:var(--s1);font-size:14px;color:var(--muted)">' + dlabel(sx.at) + ' · Swap chore request</p>' +
       '<p class="flbl">With</p><div class="chips prow" style="margin-top:0">' + mates.map(function (p) { return chip(p.name, f.swapWith === p.id, 'swapWith', p.id, ' blue'); }).join('') + '</div>' +
       '<p class="flbl">For one of ' + P(f.swapWith).first + '\'s chores</p>' + (theirs.length ? '<div class="card list">' + theirs.map(function (y) {
         return '<button class="row" style="min-height:56px" data-act="swapGet" data-v="' + y.key + '" aria-pressed="' + (f.swapGet === y.key) + '"><span class="grow"><span class="t">' + esc(y.c.name) + '</span><span class="s">' + dlabel(y.at) + '</span></span>' + (f.swapGet === y.key ? ic(I.check, 18, 2.4, '#255A9B') : '') + '</button>'; }).join('') + '</div>'
